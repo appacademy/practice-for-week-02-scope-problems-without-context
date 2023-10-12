@@ -26,6 +26,14 @@ Example 3:
 ***********************************************************************/
 function coinCollector(numCoins) {
   // Your code here
+  let coints = [];
+
+  function inner(coint) {
+    coints.push(coint);
+    return coints.length === numCoins ? coints : inner;
+  }
+
+  return inner;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
